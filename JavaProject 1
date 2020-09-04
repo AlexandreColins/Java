@@ -1,0 +1,54 @@
+package Negocio;
+
+import java.util.Scanner;
+
+import Estrutura.Carro;
+
+public class Veiculo {
+
+	Scanner input = new Scanner(System.in);
+
+	private String cor = "preto";
+	private int anoFabricacao;
+
+	public Carro carro;
+
+	public String getCor() {
+		return cor;
+	}
+
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+
+	public int getAnoFabricacao() {
+		return anoFabricacao;
+	}
+
+	public int setAnoFabricacao(int anoFabricacao) {
+		return this.anoFabricacao = anoFabricacao;
+	}
+
+	public boolean pintar(String cor) {
+
+		System.out.println("Deseja pintar seu carro");
+		boolean a = input.nextBoolean();
+
+		if (a == true) {
+
+			System.out.println("Escolha uma cor para seu carro: ");
+			cor = input.next();
+			
+			
+			System.out.println("A cor do carro é" + cor);
+
+			return a;
+		} else {
+
+			System.out.println("O carro nao será pintado!");
+			return a;
+		}
+
+	}
+
+}
